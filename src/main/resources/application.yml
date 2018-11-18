@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kaven?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT-8
+    username: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 扫描 mapper 文件， mybatis 的核心-映射文件
+  type-aliases-package: com.kaven.springboot_mybatis.domin #在映射文件中就可以直接使用类名，不需要指定包名
+
+
